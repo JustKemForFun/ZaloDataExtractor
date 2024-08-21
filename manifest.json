@@ -1,0 +1,30 @@
+{
+	"name": "ZaloDataExtractor",
+	"version": "1.0.0",
+	"manifest_version": 3,
+	"icons": {
+		"16": "images/icon-16.png",
+		"32": "images/icon-32.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": [
+		"notifications",
+		"activeTab",
+		"cookies",
+        "webRequest",
+		"clipboardWrite",
+        "declarativeNetRequest"
+	],
+	"host_permissions": [
+		"<all_urls>"
+	],
+	"action": {
+		"default_icon": {
+			"16": "images/icon-16.png",
+			"32": "images/icon-32.png"
+		},
+		"default_popup": "popup.html"
+	}
+}

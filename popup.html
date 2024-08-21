@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+      <!-- Copyright 2024 Kem. All rights reserved. MIT license. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zalo User Information</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-8">
+  <div class="bg-white p-8 rounded-lg shadow-md">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-2xl font-bold">Zalo User Information</h1>
+      <!-- <button id="open-in-new-tab" class="text-blue-500 hover:text-blue-600">open in new tab</button> -->
+    </div>
+
+    <div class="mb-4">
+      <label for="imei" class="block font-medium mb-2">IMEI:</label>
+      <input type="text" id="imei" class="border border-gray-300 px-4 py-2 rounded-md w-full" readonly>
+    </div>
+
+    <div class="mb-4">
+      <label for="cookies" class="block font-medium mb-2">Cookies:</label>
+      <textarea id="cookies" class="border border-gray-300 px-4 py-2 rounded-md w-full" rows="3" readonly></textarea>
+    </div>
+
+    <div class="mb-4">
+      <label for="user-agent" class="block font-medium mb-2">User-Agent:</label>
+      <input type="text" id="user-agent" class="border border-gray-300 px-4 py-2 rounded-md w-full" readonly>
+    </div>
+    
+      <div class="button-container">
+        <button id="btn-copy-imei" class="export-imei"><i class="el-icon-document-copy"></i> Copy IMEI</button>
+        <button id="btn-copy-cookies" class="export-cookies"><i class="el-icon-document-copy"></i> Copy Cookies</button>
+        <button id="btn-copy-ua" class="export-ua"><i class="el-icon-document-copy"></i> Copy User-Agent</button>
+        <button type="button" id="refresh-button" class="rf-page">Refresh Page</button>
+    </div>
+    </div>
+  </div>
+
+  <script src="./js/custom.js"></script>
+  <script src="./js/popup.js"></script>
+</body>
+</html>
