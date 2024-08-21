@@ -3,7 +3,7 @@
  The purpose of this repository is to be used in conjunction with the [zca-js](https://github.com/RFS-ADRENO/zca-js), significantly increasing its effectiveness.
 
 ## Overview
-**ZaloDataExtractor** is a tool designed to extract essential information from the Zalo app, including IMEI, Cookies, and User Agent. This tool is perfect for developers, analysts, and anyone needing quick access to these data points for analysis, development, or app compatibility testing.
+**ZaloDataExtractor** is a tool designed to extract essential information from the Zalo APP, including IMEI, Cookies, and User-Agent. This tool is perfect for developers, analysts, and anyone needing quick access to these data points for analysis, development, or app compatibility testing.
 
 ## Features
 
