@@ -15,13 +15,22 @@ ZaloDataExtractor
 - **Fetch Cookies:** Capture session cookies for further use in development or analysis.
 - **Get User Agent:** Extract the User Agent string for compatibility testing and user environment analysis.
 
-## Usage
+## Installation
+
 ```bash
 git clone https://github.com/JustKemForFun/ZaloDataExtractor/
 ```
-- After cloning the repository, navigate to the `C:\Users\Admin\Documents` folder and move the cloned repository folder there. Then, extract the files.
+- Clone or download this repository to your local machine.
 - Open your browser and manually type `chrome://extensions/` in the *Chrome browser* or `edge://extensions/` in the *Edge browser* into the address bar.
-- Once there, enable *Developer Mode* and click *Load unpacked*. Navigate to the folder containing the unpacked files is located and select it.
+- Enable "Developer mode" in the top right corner.
+- Click on "Load unpacked" and select the folder where you cloned or downloaded the extension.
+<!-- - After cloning the repository, navigate to the `C:\Users\Admin\Documents` folder and move the cloned repository folder there. Then, extract the files.
+- Once there, enable *Developer Mode* and click *Load unpacked*. Navigate to the folder containing the unpacked files is located and select it. -->
+
+## Usage
+
+- Open Zalo Web in your *Chrome browser* or *Egde browser*.
+- Click on **Extension** and press *Refresh Page* to start getting information.
 
 ## Contributing
 
