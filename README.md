@@ -1,6 +1,7 @@
 <h1 align="center">
 ZaloDataExtractor
 </h1>
+<img align='right' src="https://i.imgur.com/FkE8vBc.png" width="75" height="75">
 
 > [!NOTE]
  The purpose of this repository is to be used in conjunction with the [zca-js](https://github.com/RFS-ADRENO/zca-js/), significantly increasing its effectiveness.
@@ -10,7 +11,7 @@ ZaloDataExtractor
 
 ## Features
 
-- **Extract IMEI:** Retrieve the IMEI number associated with the Zalo app.
+- **Extract IMEI:** Retrieve the IMEI number associated with the Zalo APP.
 - **Fetch Cookies:** Capture session cookies for further use in development or analysis.
 - **Get User Agent:** Extract the User Agent string for compatibility testing and user environment analysis.
 
