@@ -18,7 +18,9 @@ ZaloDataExtractor
 ```bash
 git clone https://github.com/JustKemForFun/ZaloDataExtractor/
 ```
-- After git clone the repository, navigate to the C drive, go to the Users/Admin folder, and move the cloned repository folder into the Documents. Then, extract the files and upload the unpacked folder on [Chrome-Extension](chrome://extensions/) or [Edge-Extension](edge://extensions/).
+- After cloning the repository, navigate to the `C:\Users\Admin\Documents` folder and move the cloned repository folder there. Then, extract the files.
+- Open your browser and manually type `chrome://extensions/` in the *Chrome browser* or `edge://extensions/` in the *Edge browser* into the address bar.
+- Once there, enable *Developer Mode* and click *Load unpacked*. Navigate to the folder containing the unpacked files is located and select it.
 
 ## Contributing
 
