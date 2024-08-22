@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener(function(request) {
+chrome.runtime.onMessage.addListener(function (request) {
   if (request.action === "IMEIValue") {
     document.getElementById("imei").value = request.imei;
     document.getElementById("imei").parentElement.classList.remove("is-disabled");
