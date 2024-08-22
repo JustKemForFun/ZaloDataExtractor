@@ -7,6 +7,8 @@
 	"icons": {
 		"16": "images/icon-16.png",
 		"32": "images/icon-32.png",
+		"64": "images/icon-64.png",
+		"128": "images/icon-128.png",
 		"192": "images/icon-192.png",
 		"384": "images/icon-384.png"
 	},
