@@ -11,7 +11,7 @@
 
 - **Extract IMEI:** Retrieve the IMEI number associated with the Zalo APP.
 - **Fetch Cookies:** Capture session cookies for further use in development or analysis.
-- **Get User Agent:** Extract the User Agent string for compatibility testing and user environment analysis.
+- **Get User Agent:** Extract the User-Agent string for compatibility testing and user environment analysis.
 
 ## Installation
 
@@ -29,6 +29,14 @@ git clone https://github.com/JustKemForFun/ZaloDataExtractor/
 
 - Open Zalo Web in your *Chrome browser* or *Egde browser*.
 - Click on **Extension** and press *Refresh Page* to start getting information.
+
+## Icons
+
+- The extension comes with various icons to match different sizes (16px, 32px, 64px, 128px, 192px, 384px).
+
+## Troubleshooting
+
+If you encounter any issues or have suggestions for improvements, please [create an issue](https://github.com/JustKemForFun/ZaloDataExtractor/issues).
 
 ## Contributing
 
