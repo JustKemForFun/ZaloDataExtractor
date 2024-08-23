@@ -25,14 +25,14 @@
 		"webRequest",
 		"notifications",
 		"clipboardWrite",
-        "declarativeNetRequest"
+		"declarativeNetRequest"
 	],
 	"content_scripts": [
-    	{
-      	  "matches": ["<all_urls>"],
-      	  "js": ["js/popup.js"]
-    	}
-  	],
+		{
+			"matches": ["<all_urls>"],
+			"js": ["js/popup.js"]
+		}
+	],
 	"host_permissions": [
 		"<all_urls>"
 	],
@@ -43,9 +43,9 @@
 		"default_popup": "popup.html"
 	},
 	"externally_connectable": {
-    "matches": [
-      "http://localhost:3008/*",
-      "http://127.0.0.1:3008/*"
-    ]
-  }
+		"matches": [
+			"http://localhost:3008/*",
+			"http://127.0.0.1:3008/*"
+		]
+	}
 }
