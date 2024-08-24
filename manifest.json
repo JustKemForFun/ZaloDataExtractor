@@ -16,8 +16,6 @@
 		"service_worker": "background.js"
 	},
 	"permissions": [
-		"https://*/",
-		"http://*/",
 		"tabs",
 		"cookies",
 		"storage",
