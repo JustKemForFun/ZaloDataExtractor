@@ -14,7 +14,7 @@ function captureRequests() {
 
       }
 
-      // If IMEI is found and URL is chat.zalo.me, get cookies || error pls issue github.com/JustKemForFun/ZaloDataExtractor
+      // If IMEI is found and URL is chat.zalo.me, get cookies || error pls create an issue github.com/JustKemForFun/ZaloDataExtractor
       if (imeiFound && url.includes("chat.zalo.me")) {
         chrome.cookies.getAll({ url: url }, function (cookies) {
           let cookiesDict = {};
