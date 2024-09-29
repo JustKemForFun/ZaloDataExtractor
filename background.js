@@ -12,16 +12,9 @@ function captureRequests() {
 
         chrome.runtime.sendMessage({ action: "IMEIValue", imei: imeiValue });
 
-        // let notificationOptions = {
-        //   type: "basic",
-        //   title: "IMEI Found",
-        //   message: "Successfully get IMEI",
-        //   iconUrl: "/images/success.png",
-        // };
-        // chrome.notifications.create(notificationOptions);
       }
 
-      // If IMEI is found and URL is chat.zalo.me, get cookies
+      // If IMEI is found and URL is chat.zalo.me, get cookies || error pls issue github.com/JustKemForFun/ZaloDataExtractor
       if (imeiFound && url.includes("chat.zalo.me")) {
         chrome.cookies.getAll({ url: url }, function (cookies) {
           let cookiesDict = {};
@@ -30,21 +23,28 @@ function captureRequests() {
             cookiesDict[cookies[i].name] = cookies[i].value;
           }
 
-          let cookieArray = Object.entries(cookiesDict).map(([name, value]) => `${name}=${value}`);
-          let cookieString = cookieArray.join("; ");
+          let listString = [
+            "_zlang",
+            "app.event.zalo.me",
+            "zpw_sek",
+            "__zi", // = "__zi-legacy:"
+            "zoaw_sek",
+            "zoaw_type",
+            "zpsid",
+          ];
+      
+          let cookieArray = listString
+            .map((name) => `${name}=${cookiesDict[name]}`)
+            .filter((cookie) => cookie.includes('='));
+
+          // let cookieArray = Object.entries(cookiesDict).map(([name, value]) => `${name}=${value}`);
+          let cookieString = cookieArray.join(";"); // ("; ")
 
           chrome.runtime.sendMessage({
             action: "CookiesValue",
             cookies: cookieString,
           });
 
-          // let notificationOptions = {
-          //   type: "basic",
-          //   title: "Cookies Found",
-          //   message: "Successfully get Cookies",
-          //   iconUrl: "/images/success.png",
-          // };
-          // chrome.notifications.create(notificationOptions);
         });
       }
 
@@ -52,13 +52,6 @@ function captureRequests() {
       let userAgent = navigator.userAgent;
       chrome.runtime.sendMessage({ action: "UserAgent", useragent: userAgent });
 
-      // let notificationOptions = {
-      //   type: "basic",
-      //   title: "User-Agent Found",
-      //   message: "Successfully get User-Agent",
-      //   iconUrl: "/images/success.png",
-      // };
-      // chrome.notifications.create(notificationOptions);
     },
     { urls: ["<all_urls>"] },
     ["requestBody"]
