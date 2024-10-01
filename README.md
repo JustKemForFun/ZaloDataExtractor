@@ -29,6 +29,7 @@ git clone https://github.com/JustKemForFun/ZaloDataExtractor/
 
 - Open Zalo Web in your *Chrome browser* or *Egde browser*.
 - Click on **Extension** and press *Refresh Page* to start getting information.
+- If you use incognito browser please enable incognito browsing in `chrome://extension` or `edge://extensions/` into the address bar.
 
 ## Icons
 
