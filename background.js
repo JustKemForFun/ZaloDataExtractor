@@ -5,6 +5,7 @@ function captureRequests() {
       let imeiValue = "Not Found";
 
       // Check if IMEI param is present in the URL
+      // imeiValue = localStorage.getItem("z_uuid"); // === sh_z_uuid
       if (url.includes("/api/login/getServerInfo") && url.indexOf("imei=") > -1) {
         let params = new URLSearchParams(new URL(url).search);
             imeiFound = true;
@@ -23,22 +24,34 @@ function captureRequests() {
             cookiesDict[cookies[i].name] = cookies[i].value;
           }
 
-          let listString = [
-            "_zlang",
-            "app.event.zalo.me",
-            "zpw_sek",
-            "__zi", // = "__zi-legacy:"
-            "zoaw_sek",
-            "zoaw_type",
-            "zpsid",
-          ];
+          // let listString = [
+          //   "_zlang",
+          //   "app.event.zalo.me",
+          //   "zpw_sek",
+          //   "__zi", // === "__zi-legacy"
+          //   "zoaw_sek",
+          //   "zoaw_type",
+          //   "zpsid",
+          // ];
+          
+          // let listStringZalo = [
+          //   // "_ga",
+          //   "zpsid",
+          //   "app.event.zalo.me",
+          //   "zpw_sek",
+          //   "__zi",
+          //   "__zi-legacy",
+          //   "zoaw_sek",
+          //   "zoaw_type",
+          //   "_zlang",
+          // ];
       
-          let cookieArray = listString
-            .map((name) => `${name}=${cookiesDict[name]}`)
-            .filter((cookie) => cookie.includes('='));
+          // let cookieArray = listString
+          //   .map((name) => `${name}=${cookiesDict[name]}`)
+          //   .filter((cookie) => cookie.includes('='));
 
-          // let cookieArray = Object.entries(cookiesDict).map(([name, value]) => `${name}=${value}`);
-          let cookieString = cookieArray.join(";"); // ("; ")
+          let cookieArray = Object.entries(cookiesDict).map(([name, value]) => `${name}=${value}`);
+          let cookieString = cookieArray.join("; "); // (";")
 
           chrome.runtime.sendMessage({
             action: "CookiesValue",
