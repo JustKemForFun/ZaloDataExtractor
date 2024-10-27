@@ -2,7 +2,7 @@
 <img align='right' src="./images/icon-384.png" width="75" height="75">
 
 > [!NOTE]
- The purpose of this repository is to be used in conjunction with the [zca-js](https://github.com/RFS-ADRENO/zca-js/), significantly increasing its effectiveness.<br>Reading documents [zca-js](https://github.com/RFS-ADRENO/zca-js/) in [here](https://zca.tdung.co/).
+ The purpose of this repository is to be used in conjunction with the [zca-js](https://github.com/RFS-ADRENO/zca-js/), significantly increasing its effectiveness.<br>Reading documents [zca-js](https://github.com/RFS-ADRENO/zca-js/) in [here](https://zca.tdung.co/).<br>Feel free to adjust any sections if needed!
 
 ## Overview
 **ZaloDataExtractor** is a tool designed to extract essential information from the Zalo APP, including IMEI, Cookies, and User-Agent. This tool is perfect for developers, analysts, and anyone needing quick access to these data points for analysis, development, or app compatibility testing.
@@ -39,9 +39,16 @@ git clone https://github.com/JustKemForFun/ZaloDataExtractor/
 
 If you encounter any issues or have suggestions for improvements, please [create an issue](https://github.com/JustKemForFun/ZaloDataExtractor/issues).
 
-## Contributing
+<!-- ## Contributing
+
+We welcome contributions from the community. -->
+## Contributors
 
 We welcome contributions from the community.
+
+| Name               | GitHub Profile                              | Avatar                                 |
+|--------------------|---------------------------------------------|----------------------------------------|
+|     Hoàng Hào      | [Kem](https://www.github.com/JustKemForFun) | <img src="https://avatars.githubusercontent.com/u/136668112" alt="Hoàng Hào" width="50" height="50" /> |
 
 ## License
 
