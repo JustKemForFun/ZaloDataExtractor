@@ -3,7 +3,8 @@ function captureRequests() {
         let url = details.url;
         let imeiFound = false;
         let imeiValue = "Not Found";
-
+  
+        // imeiValue = localStorage.getItem("z_uuid"); // === sh_z_uuid
         if (url.includes("/api/login/getServerInfo") && url.indexOf("imei=") > -1) {
           let params = new URLSearchParams(new URL(url).search);
               imeiFound = true;
@@ -13,7 +14,7 @@ function captureRequests() {
   
         }
   
-        // error pls create an issue github.com/JustKemForFun/ZaloDataExtractor
+        // get cookies || error pls create an issue github.com/JustKemForFun/ZaloDataExtractor
         if (imeiFound && url.includes("chat.zalo.me")) {
           chrome.cookies.getAll({ url: url }, function (cookies) {
             let cookiesDict = {};
@@ -22,17 +23,14 @@ function captureRequests() {
               cookiesDict[cookies[i].name] = cookies[i].value;
             }
   
-            let cookiesObject = Object.entries(cookiesDict).map(([key, value]) => `"${key}": "${value}"`).join(",\n");
-            cookiesObject = "{\n" + cookiesObject + "\n}";
+            let cookieArray = Object.entries(cookiesDict).map(([name, value]) => `${name}=${value}`);
+            let cookieString = cookieArray.join("; "); // (";")
   
-            chrome.runtime.sendMessage({
-              action: "CookiesValue",
-              cookies: cookiesObject,
-            });
+            chrome.runtime.sendMessage({ action: "CookiesValue", cookies: cookieString });
   
           });
         }
-
+  
         let userAgent = navigator.userAgent;
         chrome.runtime.sendMessage({ action: "UserAgent", useragent: userAgent });
   
@@ -43,3 +41,4 @@ function captureRequests() {
   }
   
   captureRequests();
+  
