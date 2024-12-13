@@ -1,6 +1,6 @@
 {
 	"name": "ZaloDataExtractor",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "ZaloDataExtractor is a tool that extracts essential information like IMEI, Cookies, and User-Agent from the Zalo APP. It's designed for easy use, allowing quick and accurate data collection for analysis, development, or app compatibility",
 	"manifest_version": 3,
 	"homepage_url": "https://github.com/JustKemForFun/ZaloDataExtractor/",
